@@ -1,27 +1,27 @@
 public class SelectionSort {
 
-    public static int[] sort(int[] mas) {
-        for(int i = 0; i < mas.length; i++) {
-            int p = i;
-            int min = mas[i];
+    public static int[] sort(int[] array) {
+        for(int i = 0; i < array.length; i++) {
+            int position = i;
+            int min = array[i];
 
-            for(int j = i + 1; j < mas.length; j++ ) {
-                if(mas[j] < min) {
-                    p = j;
-                    min = mas[j];
+            for(int j = i + 1; j < array.length; j++ ) {
+                if(array[j] < min) {
+                    position = j;
+                    min = array[j];
                 }
             }
 
-            mas[p] = mas[i];
-            mas[i] = min;
+            array[position] = array[i];
+            array[i] = min;
 
-            System.out.println("Цикл на " + (i + 1) + " кроці");
+            System.out.println("Cycle in " + (i + 1) + " step");
 
-            for(int k = 0; k < mas.length; k++) {
-                System.out.print(mas[k] + " ");
+            for(int k = 0; k < array.length; k++) {
+                System.out.print(array[k] + " ");
             }
             System.out.println();
         }
-        return mas;
+        return array;
     }
 }
