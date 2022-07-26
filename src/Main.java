@@ -16,23 +16,8 @@ public class Main {
         System.out.println("Вхідний масив: ");
         printArray(mas);
 
-        for(int i = 0; i < mas.length; i++) {
-            int p = i;
-            int min = mas[i];
+        SelectionSort.sort(mas);
 
-            for(int j = i + 1; j < mas.length; j++ ) {
-                if(mas[j] < min) {
-                    p = j;
-                    min = mas[j];
-                }
-            }
-
-            mas[p] = mas[i];
-            mas[i] = min;
-
-            System.out.println("Цикл на " + (i + 1) + " кроці");
-            printArray(mas);
-        }
         System.out.println("Кінцевий масив: ");
         printArray(mas);
     }
